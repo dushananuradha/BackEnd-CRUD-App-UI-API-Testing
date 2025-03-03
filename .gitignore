@@ -1,0 +1,6 @@
+# Ignore files from staging
+.env
+
+node_modules/
+
+*.text
