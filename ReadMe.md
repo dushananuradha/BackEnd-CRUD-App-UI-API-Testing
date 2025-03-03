@@ -3,9 +3,8 @@
 ## Getting Started
 
 1. **Clone the repository**:
-   
-   git clone https://github.com/yourusername/backend-crud-ui-api-testing.git
-   cd backend-crud-ui-api-testing
+   + git clone https://github.com/yourusername/backend-crud-ui-api-testing.git
+   + cd backend-crud-ui-api-testing
 
 3. **Install dependencies**:
    npm install
