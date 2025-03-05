@@ -1,11 +1,14 @@
-import { Player } from "../models/playerModel.js";
+import { Player, CreatePlayer } from "../models/playerModel.js";
 
 class PlayerOperations {
   async createPlayer(req, res) {
     try {
-      const newPlayer = new Player({
+      const newPlayer = new CreatePlayer({
         name: req.body.name,
         sport: req.body.sport,
+        country: req.body.country,
+        profile: req.body.profile,
+        currentStatus: req.body.currentStatus
       });
       const createdPlayer = await newPlayer.save();
       console.log(createdPlayer);

@@ -1,9 +1,12 @@
 import mongoose from "mongoose";
 
 const playerSchema = new mongoose.Schema({
-  id: Number,
-  name: String,
-  sport: String,
+  id: { type: Number, required: true },
+  name: { type: String, required: true },
+  sport: { type: String, required: true },
+  country: { type: String, required: true },
+  profile: { type: String, required: true },
+  currentStatus: { type: Boolean, required: true }
 });
 
 const createPlayerSchema = new mongoose.Schema(
