@@ -54,6 +54,9 @@ class PlayerOperations {
         {
           name: req.body.name,
           sport: req.body.sport,
+          country: req.body.country,
+          profile: req.body.profile,
+          currentStatus: req.body.currentStatus
         },
         { new: true }
       );
@@ -68,7 +71,7 @@ class PlayerOperations {
     }
   }
 
-  async deletePlayer(req, res){
+  async deletePlayer(req, res) {
     const playerToDelete = req.params.playerID;
     try {
       const deletedPlayer = await Player.findByIdAndDelete(playerToDelete);
@@ -81,7 +84,7 @@ class PlayerOperations {
       console.error("Error deleting player:", err);
       res.status(500).json({ err: "Failed to delete player" });
     }
-  
+
   }
 
 }
